@@ -18,7 +18,7 @@ To get a list of root object oids we have to read the references under `.git/ref
 
 Especially when you sync the repository, you can get objects which are only reachable from newly created remote branches.
 
-Additionally we have to read the object ids from the `.git/index` file. When you stage a file, an object will be added to the loose object store and its id is added to the `.git/index` file, which is the only reference to that object.
+Additionally we have to read the object ids from the `.git/index` file. When you stage a file, an object will be added to the loose object store and its id is added to the `.git/index` file, which is the only reference to that object until you create a commit.
 
 It is no problem to add additional object ids to the list.
 
