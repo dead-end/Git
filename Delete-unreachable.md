@@ -8,9 +8,12 @@ The basis algorithm is straigt forward.
 - get unreachable objects as the difference between all and the reachable objects
 - delete the unreachable objects
 
-### Get root objects
+### Get root objects oids
 To get the root objects we have to read the references under ˋ.git/refsˋ. They include local branches and remote branches which are created by sync calls.
+
 Additionally we have to read the object ids from the ˋ.git/indexˋ file. Especially the staged objects are added to the store and have no other reference than the in the ˋ.git/indexˋ file.
+
+It is no problem if we have additional oids.
 
 ### Get reachable objects
 
