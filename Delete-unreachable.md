@@ -1,5 +1,5 @@
 ## Delete unreachable objects
-In this document I describe how to delete unreachable objects from a loose store in isomophic-git.
+In this document I describe how to delete unreachable loose objects in isomophic-git.
 
 The basis algorithm is straigt forward.
 - get a list of root object ids
@@ -9,7 +9,14 @@ The basis algorithm is straigt forward.
 - delete the unreachable objects
 
 ### Get root objects oids
-To get a list of root object oids we have to read the references under ˋ.git/refsˋ. They include local branches and remote branches which are created by sync calls.
+To get a list of root object oids we have to read the references under ˋ.git/refsˋ. They include:
+
+- local branches
+- local tags
+- remote branches
+- remote tags
+
+Especially when you sync the repository, you can get objects which are only reachable from newly created remote branches.
 
 Additionally we have to read the object ids from the ´.git/index´ file. Especially the staged objects are added to the store and have no other reference than the in the ˋ.git/indexˋ file.
 
