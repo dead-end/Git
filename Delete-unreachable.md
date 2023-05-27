@@ -51,4 +51,4 @@ Deleting loose objects is simply deleting the object files assosiated with the o
 
 To delete objects from the packed object store requires to create an new packed object store and delete the old one. This is out of scope for this document.
 
-The better way is to cleanup the repository before you create a packed store. 
+The better way is to cleanup the repository before you create a packed store. So it has no unreachable objects.
