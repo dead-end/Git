@@ -28,3 +28,8 @@ We loop through the tree entries. We follow the trees. We add the oids of the bl
 We check if the commit is a shallow commit. If not we follow the oid wich is a root tree and we follow the parent commits.
 #### Blob
 We do not read blob objects, so we should never be here.
+
+### Get all oids
+To get all oids we have to get loose and packed objects.
+To get the loose objects we have to walk through the .git/objects directory and collect all obect file name (oids).
+To get the packed object oids we have to read all packed index files, which contain the oids.
