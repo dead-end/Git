@@ -9,15 +9,22 @@ The basis algorithm is straigt forward.
 - delete the unreachable objects
 
 ### Get root objects oids
-To get the root objects we have to read the references under ˋ.git/refsˋ. They include local branches and remote branches which are created by sync calls.
+To get the root objects oids we have to read the references under ˋ.git/refsˋ. They include local branches and remote branches which are created by sync calls.
 
-Additionally we have to read the object ids from the ˋ.git/indexˋ file. Especially the staged objects are added to the store and have no other reference than the in the ˋ.git/indexˋ file.
+Additionally we have to read the object ids from the ´.git/index´ file. Especially the staged objects are added to the store and have no other reference than the in the ˋ.git/indexˋ file.
 
 It is no problem if we have additional oids.
 
-### Get reachable objects
+### Get reachable objects oids
+To get the reachable object oids we walk through to store starting with the root oids and follow the objects. We mantain a set of reachable oids. Before we read an object, we check if the oid is already in the set. If not we read the object and add its oid to the set.
+
+The object has one of the four types:
 
 #### Tag
+We follow the oid which is a root tree.
 #### Tree
+We loop through the tree entries. We follow the trees. We add the oids of the blobs to the reachable set. We do not need to read blobs.
 #### Commit
+We check if the commit is a shallow commit. If not we follow the oid wich is a root tree and we follow the parent commits.
 #### Blob
+We do not read blob objects, so we should never be here.
