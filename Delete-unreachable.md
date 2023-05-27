@@ -49,6 +49,6 @@ To get unreachable oids we have to get the difference of all oids and the reacha
 ### Delete oids from loose store
 Deleting loose objects is simply deleting the object files assosiated with the object id. 
 
-To delete objects from the packed object store requires to create an new packed object store and delete the old one. This is out of scope for this document.
+To delete objects from the packed object store requires to create a new packed object store and delete the old one. This is out of scope for this document.
 
 The better way is to cleanup the repository before you create a packed store. So it has no unreachable objects.
