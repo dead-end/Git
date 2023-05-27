@@ -30,14 +30,18 @@ We check if the commit is a shallow commit. If not we follow the oid, which is a
 We do not read blob objects, so we should never be here.
 
 ### Get all object ids
-To get all oids we have to get loose and packed objects.
-To get the loose objects we have to walk through the .git/objects directory and collect all obect file name (oids).
+To get all oids we have to get a list of loose objects and and a list of objects from the packed object store.
+
+To get the loose objects we have to walk through the .git/objects directory and collect all object file name (oids).
+
 To get the packed object oids we have to read all packed index files, which contain the oids.
 
 ### Get unreachable oids
 To get unreachable oids we have to get the difference of all oids and the reachable oids.
 
 ### Delete oids from loose store
-Deleting oids from the loose store is simply deleting the object file. 
+Deleting loose objects is simply deleting the object files assosiated with the object id. 
 
-To delete oids from packed files requires to create new packed file, which is out of scope. The better way is to cleanup the repository before you pack files.
+To delete objects from the packed object store requires to create an new packed object store and delete the old one. This is out of scope for this document.
+
+The better way is to cleanup the repository before you create a packed store. 
