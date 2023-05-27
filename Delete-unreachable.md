@@ -9,7 +9,7 @@ The basis algorithm is straigt forward.
 - delete the unreachable objects
 
 ### Get root objects oids
-To get a list of root object oids we have to read the references under ˋ.git/refsˋ. They include:
+To get a list of root object oids we have to read the references under `.git/refs`. They include:
 
 - local branches
 - local tags
@@ -18,7 +18,7 @@ To get a list of root object oids we have to read the references under ˋ.git/re
 
 Especially when you sync the repository, you can get objects which are only reachable from newly created remote branches.
 
-Additionally we have to read the object ids from the ´.git/index´ file. Especially the staged objects are added to the store and have no other reference than the in the ˋ.git/indexˋ file.
+Additionally we have to read the object ids from the `.git/index` file. Especially the staged objects are added to the store and have no other reference than the in the `.git/index` file.
 
 It is no problem if we have additional oids.
 
@@ -39,7 +39,7 @@ We do not read blob objects, so we should never be here.
 ### Get all object ids
 To get all oids we have to get a list of loose objects and and a list of objects from the packed object store.
 
-To get the loose objects we have to walk through the .git/objects directory and collect all object file name (oids).
+To get the loose objects we have to walk through the `.git/objects` directory and collect all object file name (oids).
 
 To get the packed object oids we have to read all packed index files, which contain the oids.
 
