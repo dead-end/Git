@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="15.1">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLUseCase</id>
+    <coordinates>
+      <x>70</x>
+      <y>220</y>
+      <w>40</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>bg=#00ff00</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLUseCase</id>
+    <coordinates>
+      <x>670</x>
+      <y>220</y>
+      <w>40</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>bg=#00ff00</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>670</x>
+      <y>20</y>
+      <w>490</w>
+      <h>130</h>
+    </coordinates>
+    <panel_attributes>valign=center
+halign=left
+oid: 7109cdca582bbcad846eedf388abd9cff2c254aa
+--
+tree 8f4862f58b94fda888e1b143213cff3979c7af6f
+*parent 55492b902cb5ac945ff967249c31ef10cb76c8a6*
+author Dead End &lt;test@test.com&gt; 1685348888 +0200
+committer Dead End &lt;test@test.com&gt; 1685348888 +0200
+
+Next commit.</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>670</x>
+      <y>520</y>
+      <w>490</w>
+      <h>130</h>
+    </coordinates>
+    <panel_attributes>valign=center
+halign=left
+oid: 7109cdca582bbcad846eedf388abd9cff2c254aa
+--
+tree 8f4862f58b94fda888e1b143213cff3979c7af6f
+*parent 55492b902cb5ac945ff967249c31ef10cb76c8a6*
+author Dead End &lt;test@test.com&gt; 1685348888 +0200
+committer Dead End &lt;test@test.com&gt; 1685348888 +0200
+
+Next commit.</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>100</x>
+      <y>220</y>
+      <w>590</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-
+parent commit</panel_attributes>
+    <additional_attributes>10.0;20.0;570.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLUseCase</id>
+    <coordinates>
+      <x>70</x>
+      <y>220</y>
+      <w>40</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>bg=#00ff00</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>70</x>
+      <y>50</y>
+      <w>490</w>
+      <h>130</h>
+    </coordinates>
+    <panel_attributes>valign=center
+halign=left
+*oid: 55492b902cb5ac945ff967249c31ef10cb76c8a6*
+--
+tree 5f5e1edf414eeeb4960151bfd3452fda0b7b6c64
+author Dead End &lt;test@test.com&gt; 1685348625 +0200
+committer Dead End &lt;test@test.com&gt; 1685348625 +0200
+
+Initial commit.</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLUseCase</id>
+    <coordinates>
+      <x>670</x>
+      <y>440</y>
+      <w>40</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>bg=#00ff00</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>70</x>
+      <y>530</y>
+      <w>490</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>.git/shallow
+--
+*55492b902cb5ac945ff967249c31ef10cb76c8a6*
+halign=left</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>60</x>
+      <y>170</y>
+      <w>50</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>lt=.
+</panel_attributes>
+    <additional_attributes>10.0;10.0;30.0;50.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>80</x>
+      <y>170</y>
+      <w>500</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>lt=.
+</panel_attributes>
+    <additional_attributes>480.0;10.0;10.0;50.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>660</x>
+      <y>140</y>
+      <w>50</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>lt=.
+</panel_attributes>
+    <additional_attributes>10.0;10.0;30.0;80.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>680</x>
+      <y>140</y>
+      <w>500</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>lt=.
+</panel_attributes>
+    <additional_attributes>480.0;10.0;10.0;80.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>660</x>
+      <y>470</y>
+      <w>50</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>lt=.
+</panel_attributes>
+    <additional_attributes>30.0;10.0;10.0;50.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>680</x>
+      <y>470</y>
+      <w>500</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>lt=.
+</panel_attributes>
+    <additional_attributes>480.0;50.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>680</x>
+      <y>270</y>
+      <w>240</w>
+      <h>170</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;&gt;&gt;
+git clone --depth=1 &lt;url&gt;</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;150.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>550</x>
+      <y>60</y>
+      <w>140</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;&gt;</panel_attributes>
+    <additional_attributes>120.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>550</x>
+      <y>560</y>
+      <w>140</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;&gt;</panel_attributes>
+    <additional_attributes>120.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+</diagram>

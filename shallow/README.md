@@ -50,4 +50,11 @@ You can combine the depth and the branch restrictions.
 ### Shallow commits
 
 In your shallow repository you get commits which have parents in the origin but repo
-but not in the shallow repo.
+but not in the clone. So you cannot simply follow parent commit.
+
+To solve this problem the `.git/shallow` file exist. It contains a list of commit hashes.
+
+A commit, which has a parent commit which is contained in the `.git/shallow` file, should be
+interpreted as a root commit, which has no parent.
+
+![Shallow](shallow.png)
