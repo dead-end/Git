@@ -81,6 +81,8 @@ At this point the result looks like this:
 
 ![Git-Refs](git-refs.png)
 
+At this point all references are stored in separate file:
+
 ```console
 $ find .git/refs -type f
 .git/refs/heads/master
@@ -89,9 +91,24 @@ $ find .git/refs -type f
 .git/refs/tags/v2.0
 ```
 
+The next step is to call the garbage collector. One of the things that
+the gc does is to pack the refs.
+
 ```console
 $ git gc
 ```
+After the garbage collector run, the reference files are gone.
+
+```console
+$ find .git/refs/
+.git/refs/
+.git/refs/heads
+.git/refs/tags
+```
+
+The references are stored in .git/packed-refs` file. As the comment says
+the enties are sorted by the refs and the refs are peeled, which means 
+that annoteded tags are followed by the object-id of the commit.
 
 ```console
 $ cat .git/packed-refs
