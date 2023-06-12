@@ -91,6 +91,8 @@ $ find .git/refs -type f
 .git/refs/tags/v2.0
 ```
 
+## Packed-refs
+
 The next step is to call the garbage collector. One of the things that
 the gc does is to pack the refs.
 
@@ -140,7 +142,7 @@ commit
 ```
 
 If we delete a branch, which is part of the `.git/packed-refs` file, then
-this file has to be updated:
+the `.git/packed-refs` has to be updated:
 
 ```console
 $ git branch --delete branch
