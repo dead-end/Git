@@ -119,3 +119,37 @@ c897fcef1ebd3179c4e166508166045e6d5bf4a0 refs/tags/v1.0
 96fae537cfff7d797a21200dc1497e094d4fe0e9 refs/tags/v2.0
 ^e9ea1e0a0cd118317873f691a8cd015b9f78160d
 ```
+
+What happens if we create a new branch? So lets find out:
+
+```console
+$ echo "next-branch" > file.txt && git add . && git commit -m "next-branch"
+$ git branch next-branch
+```
+
+The branch is created as a refs file. The `.git/packed-refs` is untouched.
+If a branch should be resolved, then git first looks to the reference files
+and then to the packed-refs file. So the refs file overwrites the packed-refs.
+
+```console
+$ cat .git/refs/heads/next-branch
+00bd87d06032397df48d33176758302e682a44b0
+
+$ git cat-file -t 00bd87d06032397df48d33176758302e682a44b0
+commit
+```
+
+If we delete a branch, which is part of the `.git/packed-refs` file, then
+this file has to be updated:
+
+```console
+$ git branch --delete branch
+Deleted branch branch (was 00bd87d).
+
+$ cat .git/packed-refs 
+# pack-refs with: peeled fully-peeled sorted 
+00bd87d06032397df48d33176758302e682a44b0 refs/heads/master
+b79ff6b4882e9037cf5c6db6978f6acc5e0e91c7 refs/tags/v1.0
+bed95fed3540107442293c429b0f6455b6a7e865 refs/tags/v2.0
+^ccd9680bec94f38e9dae1e767ce63cd3c22f62e4
+```
