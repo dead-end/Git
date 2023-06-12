@@ -33,6 +33,7 @@
     </coordinates>
     <panel_attributes>valign=center
 halign=left
+bg=#ccccff
 oid: 7109cdca582bbcad846eedf388abd9cff2c254aa
 --
 tree 8f4862f58b94fda888e1b143213cff3979c7af6f
@@ -53,6 +54,7 @@ Next commit.</panel_attributes>
     </coordinates>
     <panel_attributes>valign=center
 halign=left
+bg=#ccccff
 oid: 7109cdca582bbcad846eedf388abd9cff2c254aa
 --
 tree 8f4862f58b94fda888e1b143213cff3979c7af6f
@@ -96,6 +98,7 @@ parent commit</panel_attributes>
     </coordinates>
     <panel_attributes>valign=center
 halign=left
+bg=#ccccff
 *oid: 55492b902cb5ac945ff967249c31ef10cb76c8a6*
 --
 tree 5f5e1edf414eeeb4960151bfd3452fda0b7b6c64
@@ -127,7 +130,8 @@ Initial commit.</panel_attributes>
     <panel_attributes>.git/shallow
 --
 *55492b902cb5ac945ff967249c31ef10cb76c8a6*
-halign=left</panel_attributes>
+halign=left
+bg=#ccffcc</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
