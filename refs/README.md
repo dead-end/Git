@@ -1,24 +1,58 @@
 # Refs
 
-Initialize the repository:
+Before we step in the details of git references we have to
+initialize the repository.
 
 ```console
 $ git init
-
 ```
 
-Create a tag:
+Fist we create we create and commit a file and then we create
+a simple tag:
 
 ```console
 $ echo "tag" > file.txt && git add . && git commit -m "tag"
 $ git tag v1.0
 ```
 
-Create an annotated tag:
+The tag resolves to a file that contains a sha1 hash. The hash
+resolves to the our fist commit which is tagged:
+
+```console
+$ cat .git/refs/tags/v1.0
+b79ff6b4882e9037cf5c6db6978f6acc5e0e91c7
+
+$ git cat-file -t b79ff6b4882e9037cf5c6db6978f6acc5e0e91c7
+commit
+```
+
+Next es update and commit the file and create an annotated tag.
 
 ```console
 $ echo "annotated-tag" > file.txt && git add . && git commit -m "annotated-tag"
 $ git tag -a v2.0 -m "Tag v2.0"
+```
+
+The annotated tag also resolves to a file with a sha1 hash. But this
+hash resolves to a tag object.
+
+```console
+$ cat .git/refs/tags/v2.0
+bed95fed3540107442293c429b0f6455b6a7e865
+
+$ git cat-file -t bed95fed3540107442293c429b0f6455b6a7e865
+tag
+
+$ git cat-file -p bed95fed3540107442293c429b0f6455b6a7e865
+object ccd9680bec94f38e9dae1e767ce63cd3c22f62e4
+type commit
+tag v2.0
+tagger Dead End <test@test.com> 1686599041 +0200
+
+Tag v2.0
+
+$ git cat-file -t ccd9680bec94f38e9dae1e767ce63cd3c22f62e4
+commit
 ```
 
 Create branch:
@@ -27,6 +61,18 @@ Create branch:
 $ echo "branch" > file.txt && git add . && git commit -m "branch"
 $ git branch branch
 ```
+
+```console
+$ cat .git/refs/heads/branch
+00bd87d06032397df48d33176758302e682a44b0
+
+$ git cat-file -t 00bd87d06032397df48d33176758302e682a44b0
+commit
+```
+
+At this point the result looks like this:
+
+![Git-Refs](git-refs.png)
 
 ```console
 $ find .git/refs -type f
@@ -49,5 +95,3 @@ c897fcef1ebd3179c4e166508166045e6d5bf4a0 refs/tags/v1.0
 96fae537cfff7d797a21200dc1497e094d4fe0e9 refs/tags/v2.0
 ^e9ea1e0a0cd118317873f691a8cd015b9f78160d
 ```
-
-![Git-Refs](git-refs.png)

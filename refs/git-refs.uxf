@@ -186,45 +186,4 @@ f2c667</panel_attributes>
     <panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes>
     <additional_attributes>10.0;10.0;50.0;10.0</additional_attributes>
   </element>
-  <element>
-    <id>UMLPackage</id>
-    <coordinates>
-      <x>490</x>
-      <y>50</y>
-      <w>500</w>
-      <h>140</h>
-    </coordinates>
-    <panel_attributes>halign=left
-.git/packed-refs
---
-# pack-refs with: peeled fully-peeled sorted
-f2c6679f38b2bf8d5dc0f090a8a424d380b343fd refs/heads/branch
-f2c6679f38b2bf8d5dc0f090a8a424d380b343fd refs/heads/master
-c897fcef1ebd3179c4e166508166045e6d5bf4a0 refs/tags/v1.0
-96fae537cfff7d797a21200dc1497e094d4fe0e9 refs/tags/v2.0
-^e9ea1e0a0cd118317873f691a8cd015b9f78160d</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>210</x>
-      <y>140</y>
-      <w>300</w>
-      <h>30</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
-    <additional_attributes>10.0;10.0;280.0;10.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>170</x>
-      <y>180</y>
-      <w>360</w>
-      <h>130</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
-    <additional_attributes>10.0;80.0;10.0;110.0;340.0;110.0;340.0;10.0</additional_attributes>
-  </element>
 </diagram>
